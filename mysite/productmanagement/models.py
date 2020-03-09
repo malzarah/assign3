@@ -11,8 +11,8 @@ class Location(models.Model):
     zip = models.CharField(max_length=6, null=True)
     notes = models.TextField(max_length=255, null=True)
 
-    def __str__(self):
-        return self.location
+    # def __str__(self):
+    #     return self.location
 
     def get_absolute_url(self):
         return reverse('location', args=[str(self.id)])
@@ -27,8 +27,8 @@ class Customer(models.Model):
     zip = models.CharField(max_length=6, null=True)
     notes = models.TextField(max_length=255, null=True)
 
-    def __str__(self):
-        return self.location
+    # def __str__(self):
+    #     return self.Customer
 
     def get_absolute_url(self):
         return reverse('location', args=[str(self.id)])
@@ -39,8 +39,8 @@ class Product(models.Model):
     product_manufacturer=models.CharField(max_length=50, )
 
 
-    def __str__(self):
-        return self.location
+    # def __str__(self):
+    #     return self.location
 
     def get_absolute_url(self):
         return reverse('location', args=[str(self.id)])
